@@ -20,7 +20,7 @@ public class RiddleGame {
             if (!choice.equals("yes")) break;
         }
 
-        System.out.println("🎉 Game Over! Your final score: " + score);
+        System.out.println(" Game Over! Your final score: " + score);
         System.out.println("Thanks for playing!");
     }
 
@@ -32,22 +32,22 @@ public class RiddleGame {
             String answer = scanner.nextLine();
 
             if (answer.equalsIgnoreCase(riddle.answer)) {
-                System.out.println("✅ Correct!");
+                System.out.println(" Correct!");
                 score += riddle.points;
                 return;
             } else {
                 attempts--;
-                System.out.println("❌ Incorrect! Attempts left: " + attempts);
+                System.out.println(" Incorrect! Attempts left: " + attempts);
                 if (attempts == 1) {
                     System.out.println("Want a hint? (yes/no)");
                     if (scanner.nextLine().toLowerCase().equals("yes")) {
-                        System.out.println("💡 Hint: " + riddle.hint);
+                        System.out.println(" Hint: " + riddle.hint);
                     }
                 }
             }
         }
 
-        System.out.println("😓 The correct answer was: " + riddle.answer);
+        System.out.println(" The correct answer was: " + riddle.answer);
     }
 
     static List<Riddle> getRiddlesByDifficulty(String difficulty) {
